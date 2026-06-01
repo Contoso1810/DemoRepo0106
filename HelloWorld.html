@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #4a90e2, #50e3c2);
+        color: #ffffff;
+      }
+      .container {
+        text-align: center;
+        padding: 40px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.14);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(10px);
+      }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 12px;
+      }
+      p {
+        font-size: 1.1rem;
+        margin: 16px 0 24px;
+      }
+      button {
+        border: none;
+        border-radius: 999px;
+        padding: 14px 26px;
+        font-size: 1rem;
+        cursor: pointer;
+        background: #ffffff;
+        color: #333333;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.18);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello, World!</h1>
+      <p>Welcome to your simple HTML website. Click the button to see a greeting.</p>
+      <button id="greetButton">Show Greeting</button>
+      <p id="message" aria-live="polite"></p>
+    </div>
+    <script>
+      const button = document.getElementById('greetButton');
+      const message = document.getElementById('message');
+      button.addEventListener('click', () => {
+        message.textContent = 'Hello from your website! Have a great day.';
+      });
+    </script>
+  </body>
+</html>
